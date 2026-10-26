@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Cleaning Schedule Rabos System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Barangay Cleaning Schedule System</h1>
+        <p>Community Cleanliness and Waste Management</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="stat">
+                <h3>Total Schedules</h3>
+                <p id="totalSchedules">0</p>
+            </div>
+            <div class="stat">
+                <h3>Upcoming</h3>
+                <p id="upcomingSchedules">0</p>
+            </div>
+            <div class="stat">
+                <h3>Completed</h3>
+                <p id="completedSchedules">0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Create Cleaning Schedule</h2>
+
+            <form id="scheduleForm">
+                <label for="activity">Cleaning Activity</label>
+                <input type="text" id="activity"
+                    placeholder="e.g. Community Clean-Up" required>
+
+                <label for="area">Area / Saripongpong</label>
+                <input type="text" id="area"
+                    placeholder="e.g. Purok 1 or Barangay Hall" required>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+
+                <label for="team">Assigned Team / Residents</label>
+                <input type="text" id="team"
+                    placeholder="e.g. Purok 1 Cleaning Team" required>
+
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes"
+                    placeholder="Tools needed, meeting point, etc."></textarea>
+
+                <button type="submit">Add Schedule</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Cleaning Schedules</h2>
+
+            <input type="search" id="search"
+                placeholder="Search activity, area, or team...">
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Area</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Assigned Team</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scheduleList"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No cleaning schedules yet.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Barangay Cleaning Schedule System &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

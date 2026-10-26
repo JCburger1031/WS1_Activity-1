@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f1;
+    color: #263328;
+}
+
+header {
+    background: #176b3a;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 16px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border-left: 5px solid #249653;
+    box-shadow: 0 2px 6px #00000010;
+}
+
+.stat h3 {
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.stat p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #176b3a;
+    margin-bottom: 0;
+}
+
+.panel {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px #00000010;
+}
+
+.panel h2 {
+    color: #176b3a;
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5cc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    background: #218447;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button {
+    margin-top: 8px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+th, td {
+    border: 1px solid #dce4dc;
+    padding: 11px;
+    text-align: left;
+}
+
+th {
+    background: #e0f1e4;
+    color: #175b31;
+}
+
+tr:nth-child(even) {
+    background: #f8faf8;
+}
+
+.status {
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-scheduled {
+    background: #fff0c2;
+    color: #755500;
+}
+
+.status-progress {
+    background: #d9eaff;
+    color: #154f8a;
+}
+
+.status-completed {
+    background: #d9f5df;
+    color: #176b3a;
+}
+
+.action-button {
+    margin: 2px;
+    font-size: 12px;
+}
+
+.delete-button {
+    background: #c93434;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #687568;
+    padding: 12px;
+}
+
+footer {
+    text-align: center;
+    background: #176b3a;
+    color: white;
+    padding: 15px;
+}
+
+@media (max-width: 650px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
